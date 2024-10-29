@@ -1,4 +1,3 @@
-<!-- resources/views/portfolio.blade.php -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,60 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        .skills,
-        .projects {
-            margin-top: 20px;
-        }
-
-        .skills li,
-        .projects li {
-            list-style: none;
-            padding: 5px 0;
-        }
-    </style>
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body>
-    <div class="container">
-        <h1>{{ $data['name'] }}</h1>
-        <p>{{ $data['bio'] }}</p>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <div class="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-10">
+        <h1 class="text-3xl font-bold text-gray-800">{{ $data['name'] }}</h1>
+        <p class="mt-4 text-gray-600">{{ $data['bio'] }}</p>
 
-        <h2>Skills</h2>
-        <ul class="skills">
-            @foreach ($data['skills'] as $skill)
-                <li>{{ $skill }}</li>
-            @endforeach
-        </ul>
+        <div class="mt-8">
+            <h2 class="text-2xl font-semibold text-gray-700">Skills</h2>
+            <ul class="mt-4">
+                @foreach ($data['skills'] as $skill)
+                    <li
+                        class="inline-block bg-blue-200 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mr-2">
+                        {{ $skill }}</li>
+                @endforeach
+            </ul>
+        </div>
 
-        <h2>Projects</h2>
-        <ul class="projects">
-            @foreach ($data['projects'] as $project)
-                <li>
-                    <strong>{{ $project['title'] }}:</strong>
-                    <p>{{ $project['description'] }}</p>
-                    <a href="{{ $project['link'] }}" target="_blank">Ver proyecto</a>
-                </li>
-            @endforeach
-        </ul>
+        <div class="mt-8">
+            <h2 class="text-2xl font-semibold text-gray-700">Projects</h2>
+            <ul class="mt-4 space-y-4">
+                @foreach ($data['projects'] as $project)
+                    <li class="bg-gray-100 p-4 rounded-lg shadow">
+                        <strong class="text-lg text-gray-800">{{ $project['title'] }}:</strong>
+                        <p class="text-gray-600">{{ $project['description'] }}</p>
+                        <a href="{{ $project['link'] }}" class="text-blue-500 hover:text-blue-700" target="_blank">Ver
+                            proyecto</a>
+                    </li>
+                @endforeach
+            </ul>
+        </div>
     </div>
 </body>
 
