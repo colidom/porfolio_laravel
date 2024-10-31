@@ -120,7 +120,7 @@
                 <!-- Sección de Lenguajes y herramientas -->
                 <section class="py-8">
                     <h2 class="text-2xl font-semibold text-gray-200">Lenguajes y herramientas</h2>
-                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3 mt-4">
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 mt-4">
                         <a href="https://www.python.org" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/python.svg" alt="Python Logo" class="w-10 h-10 mx-auto">
@@ -135,11 +135,6 @@
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/javascript.svg" alt="JavaScript Logo" class="w-10 h-10 mx-auto">
                             <p class="mt-2 text-gray-300">JavaScript</p>
-                        </a>
-                        <a href="https://www.java.com" target="_blank"
-                            class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
-                            <img src="/img/java.svg" alt="Java Logo" class="w-10 h-10 mx-auto">
-                            <p class="mt-2 text-gray-300">Java</p>
                         </a>
                         <a href="https://laravel.com" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
@@ -216,8 +211,6 @@
                             <img src="/img/linux.svg" alt="Linux Logo" class="w-10 h-10 mx-auto">
                             <p class="mt-2 text-gray-300">Linux</p>
                         </a>
-                        <div class="bg-gray-700 p-4 rounded shadow">
-                        </div>
                     </div>
                 </section>
 
