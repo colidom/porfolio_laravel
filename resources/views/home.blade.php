@@ -120,96 +120,78 @@
                 <!-- Sección de Lenguajes y herramientas -->
                 <section class="py-8">
                     <h2 class="text-2xl font-semibold text-gray-200">Lenguajes y herramientas</h2>
-                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 mt-4">
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-9 gap-3 mt-4">
                         <a href="https://www.python.org" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/python.svg" alt="Python Logo" class="w-10 h-10 mx-auto">
-                            <p class="mt-2 text-gray-300">Python</p>
                         </a>
                         <a href="https://www.php.net" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/php.svg" alt="PHP Logo" class="w-10 h-10 mx-auto">
-                            <p class="mt-2 text-gray-300">PHP</p>
                         </a>
                         <a href="https://developer.mozilla.org/docs/Web/JavaScript" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/javascript.svg" alt="JavaScript Logo" class="w-10 h-10 mx-auto">
-                            <p class="mt-2 text-gray-300">JavaScript</p>
                         </a>
                         <a href="https://laravel.com" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/laravel.svg" alt="Laravel Logo" class="w-10 h-10 mx-auto">
-                            <p class="mt-2 text-gray-300">Laravel</p>
                         </a>
                         <a href="https://symfony.com" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/symfony.svg" alt="Symfony Logo" class="w-10 h-10 mx-auto">
-                            <p class="mt-2 text-gray-300">Symfony</p>
                         </a>
                         <a href="https://www.djangoproject.com" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/django.svg" alt="Django Logo" class="w-10 h-10 mx-auto">
-                            <p class="mt-2 text-gray-300">Django</p>
                         </a>
                         <a href="https://flask.palletsprojects.com" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/flask.svg" alt="Flask Logo" class="w-10 h-10 mx-auto">
-                            <p class="mt-2 text-gray-300">Flask</p>
                         </a>
                         <a href="https://developer.mozilla.org/docs/Web/Guide/HTML/HTML5" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/html5.svg" alt="HTML5 Logo" class="w-10 h-10 mx-auto">
-                            <p class="mt-2 text-gray-300">HTML5</p>
                         </a>
                         <a href="https://developer.mozilla.org/docs/Web/CSS" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/css3.svg" alt="CSS3 Logo" class="w-10 h-10 mx-auto">
-                            <p class="mt-2 text-gray-300">CSS3</p>
                         </a>
                         <a href="https://sass-lang.com" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/sass.svg" alt="Sass Logo" class="w-10 h-10 mx-auto">
-                            <p class="mt-2 text-gray-300">Sass</p>
                         </a>
                         <a href="https://jquery.com" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/jquery.svg" alt="jQuery Logo" class="w-10 h-10 mx-auto">
-                            <p class="mt-2 text-gray-300">jQuery</p>
                         </a>
                         <a href="https://getbootstrap.com" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/bootstrap.svg" alt="Bootstrap Logo" class="w-10 h-10 mx-auto">
-                            <p class="mt-2 text-gray-300">Bootstrap</p>
                         </a>
                         <a href="https://tailwindcss.com" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/tailwindcss.svg" alt="Tailwind CSS Logo" class="w-10 h-10 mx-auto">
-                            <p class="mt-2 text-gray-300">Tailwind CSS</p>
                         </a>
                         <a href="https://git-scm.com" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/git.svg" alt="Git Logo" class="w-10 h-10 mx-auto">
-                            <p class="mt-2 text-gray-300">Git</p>
                         </a>
                         <a href="https://www.mysql.com" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/mysql.svg" alt="MySQL Logo" class="w-10 h-10 mx-auto">
-                            <p class="mt-2 text-gray-300">MySQL</p>
                         </a>
                         <a href="https://www.postman.com" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/getpostman.svg" alt="Postman Logo" class="w-10 h-10 mx-auto">
-                            <p class="mt-2 text-gray-300">Postman</p>
                         </a>
                         <a href="https://getcomposer.org" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/composer.svg" alt="Composer Logo" class="w-10 h-10 mx-auto">
-                            <p class="mt-2 text-gray-300">Composer</p>
                         </a>
                         <a href="https://www.linux.org" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/linux.svg" alt="Linux Logo" class="w-10 h-10 mx-auto">
-                            <p class="mt-2 text-gray-300">Linux</p>
                         </a>
                     </div>
                 </section>
