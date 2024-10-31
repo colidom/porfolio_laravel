@@ -36,14 +36,14 @@
                         </svg>
                         LinkedIn
                     </a>
-                    <a href="https://www.youtube.com/@colidom" target="_blank"
-                        class="flex items-center text-red-400 transition-transform duration-300 transform hover:scale-105 hover:bg-red-900 p-2 rounded-md">
+                    <a href="mailto:colidom@outlook.com"
+                        class="flex items-center text-blue-500 transition-transform duration-300 transform hover:scale-105 hover:bg-blue-900 p-2 rounded-md">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="currentColor"
                             viewBox="0 0 24 24">
                             <path
-                                d="M23.495 6.042a2.992 2.992 0 0 0-2.1-2.1C19.137 3.2 12 3.2 12 3.2S4.864 3.2 2.605 3.942A2.992 2.992 0 0 0 .505 6.042C0 7.494 0 12 0 12s0 4.506.505 5.958a2.992 2.992 0 0 0 2.1 2.1c2.358.742 9.395.742 9.395.742s7.136 0 9.395-.742a2.992 2.992 0 0 0 2.1-2.1C24 16.506 24 12 24 12s0-4.506-.505-5.958zM9.545 15.733V8.267l6.472 3.733-6.472 3.733z" />
+                                d="M12 12.713l8.193-5.193c.195-.124.325-.344.325-.607V4.07c0-.552-.447-1-1-1H4.513c-.553 0-1 .448-1 1v2.843c0 .263.13.483.325.607L12 12.713zM12 14.062L4 9.045V20h16V9.045l-8 5.017z" />
                         </svg>
-                        YouTube
+                        Email
                     </a>
                     <a href="https://github.com/colidom" target="_blank"
                         class="flex items-center text-gray-400 transition-transform duration-300 transform hover:scale-105 hover:bg-gray-700 p-2 rounded-md">
