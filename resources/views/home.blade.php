@@ -84,11 +84,11 @@
 
 
                 <!-- Enlaces a redes sociales -->
-                <section class="mb-8">
+                <section class="py-8">
                     <h2 class="text-2xl font-semibold text-gray-200">Social Links</h2>
                     <div class="flex space-x-4 mt-4">
                         <a href="https://www.linkedin.com/in/cjod/" target="_blank"
-                            class="flex items-center text-blue-400 hover:underline">
+                            class="flex items-center text-blue-400 transition-transform duration-300 transform hover:scale-105 hover:bg-blue-900 p-2 rounded-md">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="currentColor"
                                 viewBox="0 0 24 24">
                                 <path
@@ -97,7 +97,7 @@
                             LinkedIn
                         </a>
                         <a href="https://www.youtube.com/@colidom" target="_blank"
-                            class="flex items-center text-red-400 hover:underline">
+                            class="flex items-center text-red-400 transition-transform duration-300 transform hover:scale-105 hover:bg-red-900 p-2 rounded-md">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="currentColor"
                                 viewBox="0 0 24 24">
                                 <path
@@ -106,7 +106,7 @@
                             YouTube
                         </a>
                         <a href="https://github.com/colidom" target="_blank"
-                            class="flex items-center text-gray-400 hover:underline">
+                            class="flex items-center text-gray-400 transition-transform duration-300 transform hover:scale-105 hover:bg-gray-700 p-2 rounded-md">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="currentColor"
                                 viewBox="0 0 24 24">
                                 <path
@@ -118,120 +118,125 @@
                 </section>
 
                 <!-- Sección de Lenguajes y herramientas -->
-                <section>
+                <section class="py-8">
                     <h2 class="text-2xl font-semibold text-gray-200">Lenguajes y herramientas</h2>
                     <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3 mt-4">
-                        <div
+                        <a href="https://www.python.org" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/python.svg" alt="Python Logo" class="w-10 h-10 mx-auto">
                             <p class="mt-2 text-gray-300">Python</p>
-                        </div>
-                        <div
+                        </a>
+                        <a href="https://www.php.net" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/php.svg" alt="PHP Logo" class="w-10 h-10 mx-auto">
                             <p class="mt-2 text-gray-300">PHP</p>
-                        </div>
-                        <div
+                        </a>
+                        <a href="https://developer.mozilla.org/docs/Web/JavaScript" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/javascript.svg" alt="JavaScript Logo" class="w-10 h-10 mx-auto">
                             <p class="mt-2 text-gray-300">JavaScript</p>
-                        </div>
-                        <div
+                        </a>
+                        <a href="https://www.java.com" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/java.svg" alt="Java Logo" class="w-10 h-10 mx-auto">
                             <p class="mt-2 text-gray-300">Java</p>
-                        </div>
-                        <div
+                        </a>
+                        <a href="https://laravel.com" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/laravel.svg" alt="Laravel Logo" class="w-10 h-10 mx-auto">
                             <p class="mt-2 text-gray-300">Laravel</p>
-                        </div>
-                        <div
+                        </a>
+                        <a href="https://symfony.com" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/symfony.svg" alt="Symfony Logo" class="w-10 h-10 mx-auto">
                             <p class="mt-2 text-gray-300">Symfony</p>
-                        </div>
-                        <div
+                        </a>
+                        <a href="https://www.djangoproject.com" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/django.svg" alt="Django Logo" class="w-10 h-10 mx-auto">
                             <p class="mt-2 text-gray-300">Django</p>
-                        </div>
-                        <div
+                        </a>
+                        <a href="https://flask.palletsprojects.com" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/flask.svg" alt="Flask Logo" class="w-10 h-10 mx-auto">
                             <p class="mt-2 text-gray-300">Flask</p>
-                        </div>
-                        <div
+                        </a>
+                        <a href="https://developer.mozilla.org/docs/Web/Guide/HTML/HTML5" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/html5.svg" alt="HTML5 Logo" class="w-10 h-10 mx-auto">
                             <p class="mt-2 text-gray-300">HTML5</p>
-                        </div>
-                        <div
+                        </a>
+                        <a href="https://developer.mozilla.org/docs/Web/CSS" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/css3.svg" alt="CSS3 Logo" class="w-10 h-10 mx-auto">
                             <p class="mt-2 text-gray-300">CSS3</p>
-                        </div>
-                        <div
+                        </a>
+                        <a href="https://sass-lang.com" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/sass.svg" alt="Sass Logo" class="w-10 h-10 mx-auto">
                             <p class="mt-2 text-gray-300">Sass</p>
-                        </div>
-                        <div
+                        </a>
+                        <a href="https://jquery.com" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/jquery.svg" alt="jQuery Logo" class="w-10 h-10 mx-auto">
                             <p class="mt-2 text-gray-300">jQuery</p>
-                        </div>
-                        <div
+                        </a>
+                        <a href="https://getbootstrap.com" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/bootstrap.svg" alt="Bootstrap Logo" class="w-10 h-10 mx-auto">
                             <p class="mt-2 text-gray-300">Bootstrap</p>
-                        </div>
-                        <div
+                        </a>
+                        <a href="https://tailwindcss.com" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/tailwindcss.svg" alt="Tailwind CSS Logo" class="w-10 h-10 mx-auto">
                             <p class="mt-2 text-gray-300">Tailwind CSS</p>
-                        </div>
-                        <div
+                        </a>
+                        <a href="https://git-scm.com" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/git.svg" alt="Git Logo" class="w-10 h-10 mx-auto">
                             <p class="mt-2 text-gray-300">Git</p>
-                        </div>
-                        <div
+                        </a>
+                        <a href="https://www.mysql.com" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/mysql.svg" alt="MySQL Logo" class="w-10 h-10 mx-auto">
                             <p class="mt-2 text-gray-300">MySQL</p>
-                        </div>
-                        <div
+                        </a>
+                        <a href="https://www.postman.com" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/getpostman.svg" alt="Postman Logo" class="w-10 h-10 mx-auto">
                             <p class="mt-2 text-gray-300">Postman</p>
-                        </div>
-                        <div
+                        </a>
+                        <a href="https://getcomposer.org" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/composer.svg" alt="Composer Logo" class="w-10 h-10 mx-auto">
                             <p class="mt-2 text-gray-300">Composer</p>
-                        </div>
-                        <div
+                        </a>
+                        <a href="https://www.linux.org" target="_blank"
                             class="bg-gray-700 p-4 rounded shadow transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:scale-105 text-center">
                             <img src="/img/linux.svg" alt="Linux Logo" class="w-10 h-10 mx-auto">
                             <p class="mt-2 text-gray-300">Linux</p>
+                        </a>
+                        <div class="bg-gray-700 p-4 rounded shadow">
                         </div>
                     </div>
                 </section>
 
                 <!-- Sección de Work Experience -->
-                <section id="work-experience" class="mt-4">
+                <section id="work-experience" class="my-8">
                     <h2 class="text-2xl font-semibold text-gray-200 mb-4">Experiencia laboral</h2>
                     <div class="space-y-4">
-                        <div class="bg-gray-700 p-4 rounded-lg cursor-pointer" onclick="showDescription('job1')">
+                        <div class="bg-gray-700 p-4 rounded-lg cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:bg-gray-700"
+                            onclick="showDescription('job1')">
                             <h3 class="text-lg font-semibold">Desarrollador Web en Company A</h3>
                             <p class="text-gray-400">Enero 2021 - Presente</p>
                         </div>
-                        <div class="bg-gray-700 p-4 rounded-lg cursor-pointer" onclick="showDescription('job2')">
+                        <div class="bg-gray-700 p-4 rounded-lg cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:bg-gray-700"
+                            onclick="showDescription('job2')">
                             <h3 class="text-lg font-semibold">Desarrollador Backend en Company B</h3>
                             <p class="text-gray-400">Marzo 2020 - Diciembre 2020</p>
                         </div>
-                        <div class="bg-gray-700 p-4 rounded-lg cursor-pointer" onclick="showDescription('job3')">
+                        <div class="bg-gray-700 p-4 rounded-lg cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:bg-gray-700"
+                            onclick="showDescription('job3')">
                             <h3 class="text-lg font-semibold">Practicante en Company C</h3>
                             <p class="text-gray-400">Julio 2019 - Febrero 2020</p>
                         </div>
