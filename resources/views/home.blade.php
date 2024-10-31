@@ -59,9 +59,27 @@
                 <!-- Sección de Educación -->
                 <hr class="my-6 border-gray-700">
                 <h3 class="text-xl font-semibold text-gray-300 mb-4">Education</h3>
-                <ul class="list-disc list-inside text-gray-400">
-                    <li>Bachelor's Degree in Computer Science - XYZ University</li>
-                    <li>Master's Degree in Software Engineering - ABC University</li>
+                <ul class="list-inside text-gray-400 text-sm">
+                    <li class="mt-4">
+                        <strong>I.E.S Lope de Vega - Madrid</strong><br>
+                        Desarrollador de Aplicaciones Web (DAW)<br>
+                        <span class="text-gray-500">sept. 2023 - jun. 2024</span><br>
+                    </li>
+                    <li class="mt-4">
+                        <strong>I.E.S Puerto de la Cruz - Telesforo Bravo</strong><br>
+                        Desarrollador de Aplicaciones Web (DAW)<br>
+                        <span class="text-gray-500">nov. 2022 - jun. 2023</span><br>
+                    </li>
+                    <li class="mt-4">
+                        <strong>UA - Universidad de Alicante / Universitat d'Alacant</strong><br>
+                        Introducción al desarrollo web<br>
+                        <span class="text-gray-500">2018</span><br>
+                    </li>
+                    <li class="mt-4">
+                        <strong>I.E.S Puerto de la Cruz - Telesforo Bravo</strong><br>
+                        Administrador de Sistemas Informáticos en Red<br>
+                        <span class="text-gray-500">2015 - 2018</span><br>
+                    </li>
                 </ul>
             </aside>
 
