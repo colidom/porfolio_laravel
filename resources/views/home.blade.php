@@ -24,12 +24,6 @@
 
                 </div>
 
-                <!-- Botones de contacto -->
-                <div class="mt-6 flex space-x-4">
-                    <a href="mailto:colidom@outlook.com"
-                        class="block text-center bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Email</a>
-                </div>
-
                 <!-- Redes Sociales -->
                 <hr class="my-6 border-gray-700">
                 <div class="flex space-x-4 text-sm text-gray-400">
