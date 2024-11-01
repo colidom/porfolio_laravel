@@ -28,7 +28,7 @@
                 <hr class="my-6 border-gray-700">
                 <div class="flex space-x-4 text-sm text-gray-400">
                     <a href="https://www.linkedin.com/in/cjod/" target="_blank"
-                        class="flex items-center text-blue-400 transition-transform duration-300 transform hover:scale-105 hover:bg-blue-900 p-2 rounded-md">
+                        class="flex items-center text-gray-200 transition-transform duration-300 transform hover:scale-105 hover:bg-gray-700 p-2 rounded-md">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="currentColor"
                             viewBox="0 0 24 24">
                             <path
@@ -36,17 +36,8 @@
                         </svg>
                         LinkedIn
                     </a>
-                    <a href="mailto:colidom@outlook.com"
-                        class="flex items-center text-blue-500 transition-transform duration-300 transform hover:scale-105 hover:bg-blue-900 p-2 rounded-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="currentColor"
-                            viewBox="0 0 24 24">
-                            <path
-                                d="M12 12.713l8.193-5.193c.195-.124.325-.344.325-.607V4.07c0-.552-.447-1-1-1H4.513c-.553 0-1 .448-1 1v2.843c0 .263.13.483.325.607L12 12.713zM12 14.062L4 9.045V20h16V9.045l-8 5.017z" />
-                        </svg>
-                        Email
-                    </a>
                     <a href="https://github.com/colidom" target="_blank"
-                        class="flex items-center text-gray-400 transition-transform duration-300 transform hover:scale-105 hover:bg-gray-700 p-2 rounded-md">
+                        class="flex items-center text-gray-200 transition-transform duration-300 transform hover:scale-105 hover:bg-gray-700 p-2 rounded-md">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="currentColor"
                             viewBox="0 0 24 24">
                             <path
@@ -54,6 +45,16 @@
                         </svg>
                         GitHub
                     </a>
+                    <a href="mailto:colidom@outlook.com"
+                        class="flex items-center text-gray-200 transition-transform duration-300 transform hover:scale-105 hover:bg-gray-700 p-2 rounded-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M12 12.713l8.193-5.193c.195-.124.325-.344.325-.607V4.07c0-.552-.447-1-1-1H4.513c-.553 0-1 .448-1 1v2.843c0 .263.13.483.325.607L12 12.713zM12 14.062L4 9.045V20h16V9.045l-8 5.017z" />
+                        </svg>
+                        Email
+                    </a>
+
                 </div>
 
                 <!-- Sección de Educación -->
