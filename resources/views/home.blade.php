@@ -77,7 +77,7 @@
             <main class="w-full md:w-2/3 lg:w-3/4 bg-gray-800 p-4 sm:p-8 rounded-lg md:ml-4">
                 <!-- Sección About Me -->
                 <section class="py-8">
-                    <h1 class="text-4xl font-bold text-gray-200 mb-4 text-center">Sobre mi</h1>
+                    <h2 class="text-3xl font-semibold text-gray-200 text-center">Sobre mi</h2>
                     <hr class="my-6 border-gray-700 w-1/2 mx-auto">
                     <p class="text-gray-400 mb-6 text-lg leading-relaxed text-justify">
                         Soy Carlos Oliva, desarrollador de software y administrador de sistemas, apasionado por la
