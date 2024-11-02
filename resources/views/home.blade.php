@@ -184,12 +184,31 @@
                                 <div class="bg-gray-700 p-4 rounded-lg transition-transform duration-300 transform cursor-pointer
                     {{ $experience->end_date === null ? 'border-2 border-green-400 text-gray-200 hover:bg-gray-600 hover:text-white' : 'border-2 border-gray-500 text-gray-400 opacity-75 hover:bg-gray-600 hover:text-white' }}"
                                     onclick="showDescription({{ $experience->id }})">
-                                    <h3 class="text-lg font-bold">{{ $experience->position }}</h3>
-                                    <p class="text-sm">{{ $experience->company_name }}</p>
-                                    <p class="text-sm">
-                                        {{ $experience->start_date->format('M Y') }} -
-                                        {{ $experience->end_date ? $experience->end_date->format('M Y') : 'Presente' }}
-                                    </p>
+                                    <div class="flex justify-between items-center">
+                                        <div>
+                                            <h3 class="text-lg font-bold">{{ $experience->position }}</h3>
+                                            <p class="text-sm">{{ $experience->company_name }}</p>
+                                            <p class="text-sm">
+                                                {{ $experience->start_date->format('M Y') }} -
+                                                {{ $experience->end_date ? $experience->end_date->format('M Y') : 'Presente' }}
+                                            </p>
+                                        </div>
+                                        <div class="text-sm text-gray-400">
+                                            <?php
+                                            $endDate = $experience->end_date ?? now(); // Usar la fecha actual si no hay end_date
+                                            $diff = $experience->start_date->diff($endDate);
+                                            $years = $diff->y;
+                                            $months = $diff->m;
+                                            
+                                            // Mostrar años y meses, o solo meses si no hay años
+                                            if ($years > 0) {
+                                                echo $years . ' años ' . $months . ' meses';
+                                            } else {
+                                                echo $months . ' meses';
+                                            }
+                                            ?>
+                                        </div>
+                                    </div>
                                 </div>
                             @endif
                         @endforeach
@@ -264,13 +283,44 @@
                             );
                         experienceDiv.setAttribute('onclick', `showDescription(${experience.id})`);
 
+                        // Calcular la duración en años y meses
+                        const startDate = new Date(experience.start_date);
+                        const endDate = experience.end_date ? new Date(experience.end_date) : new Date();
+                        let diffYears = endDate.getFullYear() - startDate.getFullYear();
+                        let diffMonths = endDate.getMonth() - startDate.getMonth();
+
+                        if (diffMonths < 0) {
+                            diffMonths += 12;
+                            diffYears -= 1;
+                        }
+
+                        // Formatear el texto de duración
+                        let durationText = '';
+                        if (diffYears > 0) {
+                            durationText += diffYears + ' año' + (diffYears > 1 ? 's' : '');
+                        }
+                        if (diffMonths > 0) {
+                            durationText += (durationText ? ' y ' : '') + diffMonths + ' mes' + (diffMonths > 1 ?
+                                'es' : '');
+                        }
+                        if (durationText.trim() === '') {
+                            durationText = '0 meses';
+                        }
+
+                        // Añadir el HTML de la experiencia con duración calculada
                         experienceDiv.innerHTML =
-                            `<h3 class="text-lg font-bold">${experience.position}</h3>
+                            `<div class="flex justify-between items-center">
+                        <div>
+                            <h3 class="text-lg font-bold">${experience.position}</h3>
                             <p class="text-sm">${experience.company_name}</p>
                             <p class="text-sm">
-                                ${new Date(experience.start_date).toLocaleString('default', { month: 'short', year: 'numeric' })} -
-                                ${experience.end_date ? new Date(experience.end_date).toLocaleString('default', { month: 'short', year: 'numeric' }) : 'Presente'}
-                            </p>`;
+                                ${startDate.toLocaleString('default', { month: 'short', year: 'numeric' })} -
+                                ${experience.end_date ? endDate.toLocaleString('default', { month: 'short', year: 'numeric' }) : 'Presente'}
+                            </p>
+                        </div>
+                        <div class="text-sm text-gray-400">${durationText.trim()}</div>
+                    </div>`;
+
                         experienceList.appendChild(experienceDiv);
                     }
                 });
