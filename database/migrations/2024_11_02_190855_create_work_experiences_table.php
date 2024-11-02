@@ -12,6 +12,7 @@ class CreateWorkExperiencesTable extends Migration
             $table->id();
             $table->string('company_name');
             $table->string('position');
+            $table->string('location');
             $table->text('description')->nullable();
             $table->date('start_date');
             $table->date('end_date')->nullable();
