@@ -28,7 +28,7 @@ class WorkExperienceSeeder extends Seeder
         ]);
 
         WorkExperience::create([
-            'company_name' => 'Desarrollador Web',
+            'company_name' => 'Eviden',
             'position' => 'Desarrollador Web',
             'description' => 'Desarrollé aplicaciones web robustas y eficientes utilizando Spring MVC, JSP y Hibernate para los clientes EDP y Viesgo.',
             'start_date' => '2023-09-01',
