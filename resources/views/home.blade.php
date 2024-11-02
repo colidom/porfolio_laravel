@@ -54,7 +54,7 @@
                 </div>
 
                 <!-- Sección de Educación -->
-                <h2 class="text-2xl font-semibold text-gray-200 text-center mts-8">Educación</h2>
+                <h2 class="text-2xl font-semibold text-gray-200 text-center mt-8">Educación</h2>
                 <hr class="my-6 border-gray-700 w-1/2 mx-auto">
                 <ul class="list-inside text-gray-400 text-sm">
                     @foreach ($data['education'] as $education)
