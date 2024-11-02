@@ -8,8 +8,6 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $data = WorkExperience::orderBy('start_date', 'desc')->get();
-
         $workExperiences = WorkExperience::orderBy('start_date', 'desc')->get();
 
         $data = [
