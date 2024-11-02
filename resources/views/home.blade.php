@@ -19,11 +19,10 @@
                     <div class="w-24 h-24 sm:w-32 sm:h-32 mx-auto rounded-full bg-gray-600 overflow-hidden">
                         <img src="/img/avatar.png" alt="Profile Photo" class="w-full h-full object-cover">
                     </div>
-                    <p class="text-xs sm:text-sm text-gray-400 mt-2">SysAdmin | Web Developer</p>
+                    <p class="text-xs sm:text-sm text-gray-400 mt-2 mb-2">SysAdmin | Web Developer</p>
                 </div>
 
                 <!-- Redes Sociales -->
-                <hr class="my-4 sm:my-6 border-gray-700">
                 <div class="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 text-sm text-gray-400">
                     <a href="https://www.linkedin.com/in/cjod/" target="_blank"
                         class="flex items-center text-gray-200 transition-transform duration-300 transform hover:scale-105 hover:bg-gray-700 p-2 rounded-md">
@@ -55,8 +54,8 @@
                 </div>
 
                 <!-- Sección de Educación -->
-                <hr class="my-6 border-gray-700">
-                <h3 class="text-xl font-semibold text-gray-300 mb-4">Education</h3>
+                <h2 class="text-2xl font-semibold text-gray-200 text-center mt-8">Education</h2>
+                <hr class="my-6 border-gray-700 w-1/2 mx-auto">
                 <ul class="list-inside text-gray-400 text-sm">
                     <li class="mt-4">
                         <strong>I.E.S Lope de Vega - Madrid</strong><br>
