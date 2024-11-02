@@ -19,7 +19,7 @@ class WorkExperienceSeeder extends Seeder
         ]);
 
         WorkExperience::create([
-            'company_name' => 'Securitas',
+            'company_name' => 'Eviden',
             'position' => 'Especialista en Soporte Técnico - Sala Cometa',
             'description' => 'Me desempeño como Especialista en Soporte Técnico, brindando asistencia para la aplicación CRA en un proyecto conjunto entre Vodafone y Securitas, enfocado en el seguimiento telemático de prohibiciones de aproximación en casos de violencia de género y sexual.',
             'start_date' => '2024-02-01',
