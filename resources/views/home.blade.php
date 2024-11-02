@@ -1,4 +1,3 @@
-<!-- resources/views/portfolio.blade.php -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,22 +10,21 @@
 </head>
 
 <body class="bg-gray-900 text-gray-200 font-sans">
-    <div class="min-h-screen flex justify-center p-8">
-        <div class="w-full max-w-7xl flex">
+    <div class="min-h-screen flex flex-col md:flex-row justify-center p-4 sm:p-6 md:p-8">
+        <div class="w-full max-w-7xl flex flex-col md:flex-row">
             <!-- Panel izquierdo -->
-            <aside class="w-1/4 bg-gray-800 p-6 shadow-md rounded-lg">
+            <aside class="w-full md:w-1/3 lg:w-1/4 bg-gray-800 p-4 sm:p-6 shadow-md rounded-lg mb-4 md:mb-0">
                 <div class="text-center">
                     <!-- Foto de perfil -->
-                    <div class="w-32 h-32 mx-auto rounded-full bg-gray-600 overflow-hidden">
+                    <div class="w-24 h-24 sm:w-32 sm:h-32 mx-auto rounded-full bg-gray-600 overflow-hidden">
                         <img src="/img/avatar.png" alt="Profile Photo" class="w-full h-full object-cover">
                     </div>
-                    <p class="text-sm text-gray-400 mt-2">SysAdmin | Web Developer</p>
-
+                    <p class="text-xs sm:text-sm text-gray-400 mt-2">SysAdmin | Web Developer</p>
                 </div>
 
                 <!-- Redes Sociales -->
-                <hr class="my-6 border-gray-700">
-                <div class="flex space-x-4 text-sm text-gray-400">
+                <hr class="my-4 sm:my-6 border-gray-700">
+                <div class="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 text-sm text-gray-400">
                     <a href="https://www.linkedin.com/in/cjod/" target="_blank"
                         class="flex items-center text-gray-200 transition-transform duration-300 transform hover:scale-105 hover:bg-gray-700 p-2 rounded-md">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="currentColor"
@@ -54,7 +52,6 @@
                         </svg>
                         Email
                     </a>
-
                 </div>
 
                 <!-- Sección de Educación -->
@@ -85,7 +82,7 @@
             </aside>
 
             <!-- Panel central -->
-            <main class="w-3/4 bg-gray-800 p-8 rounded-lg ml-4">
+            <main class="w-full md:w-2/3 lg:w-3/4 bg-gray-800 p-4 sm:p-8 rounded-lg md:ml-4">
                 <!-- Sección About Me -->
                 <section class="py-8">
                     <h1 class="text-4xl font-bold text-gray-200 mb-4 text-center">Sobre mi</h1>
