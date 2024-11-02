@@ -186,7 +186,7 @@
                     <h2 class="text-2xl font-semibold text-gray-200 text-center mb-4">Experiencia laboral</h2>
                     <hr class="my-6 border-gray-700 w-1/2 mx-auto">
                     <div class="space-y-4">
-                        @foreach ($data as $experience)
+                        @foreach ($data['workExperience'] as $experience)
                             <div class="bg-gray-700 p-4 rounded-lg transition-transform duration-300 transform hover:scale-105 cursor-pointer"
                                 onclick="showDescription({{ $experience->id }})">
                                 <h3 class="text-lg font-bold text-gray-200">{{ $experience->position }}</h3>
@@ -222,7 +222,7 @@
     </div>
 
     <script>
-        const descriptions = @json($data);
+        const descriptions = @json($data['workExperience']);
 
         function showDescription(jobId) {
             const modal = document.getElementById("description-modal");
