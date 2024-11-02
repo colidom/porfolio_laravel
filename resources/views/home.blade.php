@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - {{ $data['name'] }}</title>
+    <title>Portfolio - {{ isset($data['name']) ? $data['name'] : 'Nombre no disponible' }}</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link href="https://cdn.jsdelivr.net/npm/heroicons@1.0.6/outline.css" rel="stylesheet">
 </head>
@@ -182,27 +182,25 @@
                 </section>
 
                 <!-- Sección de Work Experience -->
+                <!-- Sección de Work Experience -->
                 <section id="work-experience" class="my-8">
                     <h2 class="text-2xl font-semibold text-gray-200 text-center mb-4">Experiencia laboral</h2>
                     <hr class="my-6 border-gray-700 w-1/2 mx-auto">
                     <div class="space-y-4">
-                        <div class="bg-gray-700 p-4 rounded-lg cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:bg-gray-700"
-                            onclick="showDescription('job1')">
-                            <h3 class="text-lg font-semibold">Desarrollador Web en Company A</h3>
-                            <p class="text-gray-400">Enero 2021 - Presente</p>
-                        </div>
-                        <div class="bg-gray-700 p-4 rounded-lg cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:bg-gray-700"
-                            onclick="showDescription('job2')">
-                            <h3 class="text-lg font-semibold">Desarrollador Backend en Company B</h3>
-                            <p class="text-gray-400">Marzo 2020 - Diciembre 2020</p>
-                        </div>
-                        <div class="bg-gray-700 p-4 rounded-lg cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:bg-gray-700"
-                            onclick="showDescription('job3')">
-                            <h3 class="text-lg font-semibold">Practicante en Company C</h3>
-                            <p class="text-gray-400">Julio 2019 - Febrero 2020</p>
-                        </div>
+                        @foreach ($data as $experience)
+                            <div class="bg-gray-700 p-4 rounded-lg transition-transform duration-300 transform hover:scale-105 cursor-pointer"
+                                onclick="showDescription({{ $experience->id }})">
+                                <h3 class="text-lg font-bold text-gray-200">{{ $experience->position }}</h3>
+                                <p class="text-sm text-gray-400">{{ $experience->company_name }}</p>
+                                <p class="text-sm text-gray-500">
+                                    {{ $experience->start_date->format('M Y') }} -
+                                    {{ $experience->end_date ? $experience->end_date->format('M Y') : 'Presente' }}
+                                </p>
+                            </div>
+                        @endforeach
                     </div>
                 </section>
+
             </main>
         </div>
     </div>
@@ -225,7 +223,7 @@
     </div>
 
     <script>
-        const descriptions = @json($data['workExperience']);
+        const descriptions = @json($data);
 
         function showDescription(jobId) {
             const modal = document.getElementById("description-modal");
@@ -235,7 +233,7 @@
             const job = descriptions.find(job => job.id === jobId);
 
             if (job) {
-                titleElement.textContent = job.title;
+                titleElement.textContent = job.position; // Cambiado a job.position para mostrar el puesto como título
                 descriptionElement.textContent = job.description;
 
                 modal.classList.remove("hidden");
@@ -246,6 +244,7 @@
             document.getElementById("description-modal").classList.add("hidden");
         };
     </script>
+
 
 </body>
 
