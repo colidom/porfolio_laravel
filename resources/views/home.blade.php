@@ -177,21 +177,31 @@
                 <section id="work-experience" class="my-8">
                     <h2 class="text-2xl font-semibold text-gray-200 text-center mb-4">Experiencia laboral</h2>
                     <hr class="my-6 border-gray-700 w-1/2 mx-auto">
-                    <div class="space-y-4">
-                        @foreach ($data['workExperience'] as $experience)
-                            <div class="bg-gray-700 p-4 rounded-lg transition-transform duration-300 transform cursor-pointer
-                        {{ $experience->end_date === null ? 'border-2 border-green-400 text-gray-200 hover:bg-gray-600 hover:text-white' : 'border-2 border-gray-500 text-gray-400 opacity-75 hover:bg-gray-600 hover:text-white' }}"
-                                onclick="showDescription({{ $experience->id }})">
-                                <h3 class="text-lg font-bold">{{ $experience->position }}</h3>
-                                <p class="text-sm">{{ $experience->company_name }}</p>
-                                <p class="text-sm">
-                                    {{ $experience->start_date->format('M Y') }} -
-                                    {{ $experience->end_date ? $experience->end_date->format('M Y') : 'Presente' }}
-                                </p>
-                            </div>
+                    <div class="space-y-4" id="experience-list">
+                        @foreach ($data['workExperience'] as $index => $experience)
+                            @if ($index < 5)
+                                <!-- Solo mostrar las primeras 5 experiencias -->
+                                <div class="bg-gray-700 p-4 rounded-lg transition-transform duration-300 transform cursor-pointer
+                    {{ $experience->end_date === null ? 'border-2 border-green-400 text-gray-200 hover:bg-gray-600 hover:text-white' : 'border-2 border-gray-500 text-gray-400 opacity-75 hover:bg-gray-600 hover:text-white' }}"
+                                    onclick="showDescription({{ $experience->id }})">
+                                    <h3 class="text-lg font-bold">{{ $experience->position }}</h3>
+                                    <p class="text-sm">{{ $experience->company_name }}</p>
+                                    <p class="text-sm">
+                                        {{ $experience->start_date->format('M Y') }} -
+                                        {{ $experience->end_date ? $experience->end_date->format('M Y') : 'Presente' }}
+                                    </p>
+                                </div>
+                            @endif
                         @endforeach
                     </div>
-                </section>{{-- !work-experience --}}
+
+                    @if (count($data['workExperience']) > 5)
+                        <button id="show-more" class="mt-4 text-blue-500 hover:underline"
+                            onclick="toggleExperience()">
+                            Mostrar más
+                        </button>
+                    @endif
+                </section>
             </main>
         </div>
     </div>
@@ -224,7 +234,7 @@
             const job = descriptions.find(job => job.id === jobId);
 
             if (job) {
-                titleElement.textContent = job.position; // Cambiado a job.position para mostrar el puesto como título
+                titleElement.textContent = job.position;
                 descriptionElement.textContent = job.description;
 
                 modal.classList.remove("hidden");
@@ -234,6 +244,51 @@
         document.getElementById("close-modal").onclick = function() {
             document.getElementById("description-modal").classList.add("hidden");
         };
+
+        let isMoreShown = false;
+        let allExperiences = @json($data['workExperience']); // Traemos todas las experiencias
+
+        function toggleExperience() {
+            const experienceList = document.getElementById('experience-list');
+
+            if (!isMoreShown) {
+                // Mostrar más experiencias
+                allExperiences.forEach((experience, index) => {
+                    if (index >= 5) { // Solo agregar las experiencias restantes
+                        const experienceDiv = document.createElement('div');
+                        experienceDiv.className =
+                            'bg-gray-700 p-4 rounded-lg transition-transform duration-300 transform cursor-pointer' +
+                            (experience.end_date === null ?
+                                ' border-2 border-green-400 text-gray-200 hover:bg-gray-600 hover:text-white' :
+                                ' border-2 border-gray-500 text-gray-400 opacity-75 hover:bg-gray-600 hover:text-white'
+                            );
+                        experienceDiv.setAttribute('onclick', `showDescription(${experience.id})`);
+
+                        experienceDiv.innerHTML =
+                            `<h3 class="text-lg font-bold">${experience.position}</h3>
+                            <p class="text-sm">${experience.company_name}</p>
+                            <p class="text-sm">
+                                ${new Date(experience.start_date).toLocaleString('default', { month: 'short', year: 'numeric' })} -
+                                ${experience.end_date ? new Date(experience.end_date).toLocaleString('default', { month: 'short', year: 'numeric' }) : 'Presente'}
+                            </p>`;
+                        experienceList.appendChild(experienceDiv);
+                    }
+                });
+
+                // Cambiar el texto del botón
+                document.getElementById('show-more').textContent = 'Mostrar menos';
+            } else {
+                // Ocultar experiencias adicionales
+                while (experienceList.children.length > 5) {
+                    experienceList.removeChild(experienceList.lastChild);
+                }
+
+                // Cambiar el texto del botón
+                document.getElementById('show-more').textContent = 'Mostrar más';
+            }
+
+            isMoreShown = !isMoreShown; // Alternar el estado
+        }
     </script>
 
 
