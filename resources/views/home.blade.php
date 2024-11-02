@@ -54,30 +54,23 @@
                 </div>
 
                 <!-- Sección de Educación -->
-                <h2 class="text-2xl font-semibold text-gray-200 text-center mt-8">Education</h2>
+                <h2 class="text-2xl font-semibold text-gray-200 text-center mts-8">Educación</h2>
                 <hr class="my-6 border-gray-700 w-1/2 mx-auto">
                 <ul class="list-inside text-gray-400 text-sm">
-                    <li class="mt-4">
-                        <strong>I.E.S Lope de Vega - Madrid</strong><br>
-                        Desarrollador de Aplicaciones Web (DAW)<br>
-                        <span class="text-gray-500">sept. 2023 - jun. 2024</span><br>
-                    </li>
-                    <li class="mt-4">
-                        <strong>I.E.S Puerto de la Cruz - Telesforo Bravo</strong><br>
-                        Desarrollador de Aplicaciones Web (DAW)<br>
-                        <span class="text-gray-500">nov. 2022 - jun. 2023</span><br>
-                    </li>
-                    <li class="mt-4">
-                        <strong>UA - Universidad de Alicante / Universitat d'Alacant</strong><br>
-                        Introducción al desarrollo web<br>
-                        <span class="text-gray-500">2018</span><br>
-                    </li>
-                    <li class="mt-4">
-                        <strong>I.E.S Puerto de la Cruz - Telesforo Bravo</strong><br>
-                        Administrador de Sistemas Informáticos en Red<br>
-                        <span class="text-gray-500">2015 - 2018</span><br>
-                    </li>
+                    @foreach ($data['education'] as $education)
+                        <li class="mt-4">
+                            <strong>{{ $education['institution'] }} - {{ $education['location'] }}</strong><br>
+                            {{ $education['degree'] }}<br>
+                            <span class="text-gray-500">
+                                {{ $education['start_date'] }} -
+                                {{ $education['end_date'] ?? 'Presente' }}
+                            </span><br>
+                        </li>
+                    @endforeach
                 </ul>
+
+
+
             </aside>
 
             <!-- Panel central -->
