@@ -174,25 +174,24 @@
                 </section>
 
                 <!-- Sección de Work Experience -->
-                <!-- Sección de Work Experience -->
                 <section id="work-experience" class="my-8">
                     <h2 class="text-2xl font-semibold text-gray-200 text-center mb-4">Experiencia laboral</h2>
                     <hr class="my-6 border-gray-700 w-1/2 mx-auto">
                     <div class="space-y-4">
                         @foreach ($data['workExperience'] as $experience)
-                            <div class="bg-gray-700 p-4 rounded-lg transition-transform duration-300 transform hover:scale-105 cursor-pointer"
+                            <div class="bg-gray-700 p-4 rounded-lg transition-transform duration-300 transform cursor-pointer
+                        {{ $experience->end_date === null ? 'border-2 border-green-400 text-gray-200 hover:bg-gray-600 hover:text-white' : 'border-2 border-gray-500 text-gray-400 opacity-75 hover:bg-gray-600 hover:text-white' }}"
                                 onclick="showDescription({{ $experience->id }})">
-                                <h3 class="text-lg font-bold text-gray-200">{{ $experience->position }}</h3>
-                                <p class="text-sm text-gray-400">{{ $experience->company_name }}</p>
-                                <p class="text-sm text-gray-500">
+                                <h3 class="text-lg font-bold">{{ $experience->position }}</h3>
+                                <p class="text-sm">{{ $experience->company_name }}</p>
+                                <p class="text-sm">
                                     {{ $experience->start_date->format('M Y') }} -
                                     {{ $experience->end_date ? $experience->end_date->format('M Y') : 'Presente' }}
                                 </p>
                             </div>
                         @endforeach
                     </div>
-                </section>
-
+                </section>{{-- !work-experience --}}
             </main>
         </div>
     </div>
