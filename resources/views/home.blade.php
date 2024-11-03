@@ -20,7 +20,7 @@
                         <div class="w-24 h-24 sm:w-32 sm:h-32 mx-auto rounded-full bg-gray-600 overflow-hidden">
                             <img src="/img/avatar.png" alt="Profile Photo" class="w-full h-full object-cover">
                         </div>
-                        <p class="text-xs sm:text-sm text-gray-400 mt-4 mb-5">SysAdmin | Web Developer</p>
+                        <p class="text-xs sm:text-sm text-gray-400 mt-4 mb-6">SysAdmin | Web Developer</p>
                     </div>
 
                     <!-- Redes Sociales -->
