@@ -22,6 +22,10 @@ function closeModal(event) {
     }
 }
 
+document.getElementById("close-modal").onclick = function () {
+    document.getElementById("description-modal").classList.add("hidden");
+};
+
 let isMoreShown = false;
 
 function toggleExperience() {
