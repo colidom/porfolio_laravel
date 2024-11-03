@@ -229,15 +229,17 @@
     <div id="description-modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden"
         onclick="closeModal(event)">
         <div class="bg-gray-800 p-6 rounded-lg w-full max-w-lg mx-4 relative" onclick="event.stopPropagation()">
-            <button id="close-modal" class="absolute top-2 right-2 text-red-500 hover:text-red-600"
-                onclick="closeModal(event)">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                    class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
-            <h3 id="modal-title" class="text-xl font-semibold text-gray-200 text-center mt-4 mb-2"></h3>
-            <p id="modal-description" class="text-gray-400 text-justify p-4"></p>
+            <div class="flex justify-end mb-4">
+                <button id="close-modal" class="text-red-500 hover:text-red-600" onclick="closeModal(event)">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <h3 id="modal-title" class="text-xl font-semibold text-gray-200 text-center mt-4 mb-4"></h3>
+            <p id="modal-description" class="text-gray-400 text-justify p-4 mb-6"></p>
         </div>
     </div>
 
