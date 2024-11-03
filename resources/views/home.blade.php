@@ -182,7 +182,7 @@
                             @if ($index < 5)
                                 <!-- Solo mostrar las primeras 5 experiencias -->
                                 <div class="bg-gray-700 p-4 rounded-lg transition-transform duration-300 transform cursor-pointer
-                    {{ $experience->end_date === null ? 'border-2 border-green-400 text-gray-200 hover:bg-gray-600 hover:text-white' : 'border-2 border-gray-500 text-gray-400 opacity-75 hover:bg-gray-600 hover:text-white' }}"
+                                    {{ $experience->end_date === null ? 'border-2 border-green-400 text-gray-200 hover:bg-gray-600 hover:text-white' : 'border-2 border-gray-500 text-gray-400 opacity-75 hover:bg-gray-600 hover:text-white' }}"
                                     onclick="showDescription({{ $experience->id }})">
                                     <div class="flex justify-between items-center">
                                         <div>
@@ -226,20 +226,35 @@
     </div>
 
     <!-- Cuadro de diálogo para descripciones -->
-    <div id="description-modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden"
-        onclick="closeModal(event)">
-        <div class="bg-gray-800 p-6 rounded-lg w-full max-w-lg mx-4 relative" onclick="event.stopPropagation()">
-            <div class="flex justify-end mb-4">
-                <button id="close-modal" class="text-red-500 hover:text-red-600" onclick="closeModal(event)">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                        class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
+    <div id="description-modal" tabindex="-1" class="fixed inset-0 z-50 hidden" onclick="closeModal(event)">
+        <div class="bg-black opacity-70 absolute inset-0"></div> <!-- Fondo oscuro -->
+        <div class="relative flex items-center justify-center w-full h-full">
+            <div class="relative w-full max-w-4xl max-h-full" onclick="event.stopPropagation()">
+                <!-- Detener la propagación del clic aquí -->
+                <!-- Modal content -->
+                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                    <!-- Modal header -->
+                    <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                        <h3 id="modal-title" class="text-xl font-medium text-gray-900 dark:text-white"></h3>
+                        <button type="button" id="close-modal"
+                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                            onclick="closeModal(event)">
+                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 14 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                            </svg>
+                            <span class="sr-only">Close modal</span>
+                        </button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="p-4 md:p-5 space-y-4">
+                        <p id="modal-description" class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                        </p>
+                    </div>
+                    <!-- Nota: Se han eliminado los botones del pie del modal -->
+                </div>
             </div>
-            <h3 id="modal-title" class="text-xl font-semibold text-gray-200 text-center mt-4 mb-4"></h3>
-            <p id="modal-description" class="text-gray-400 text-justify p-4 mb-6"></p>
         </div>
     </div>
 
