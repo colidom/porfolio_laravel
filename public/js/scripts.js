@@ -13,6 +13,15 @@ function showDescription(jobId) {
     }
 }
 
+function closeModal(event) {
+    if (
+        event.target.id === "description-modal" ||
+        event.target.id === "close-modal"
+    ) {
+        document.getElementById("description-modal").classList.add("hidden");
+    }
+}
+
 document.getElementById("close-modal").onclick = function () {
     document.getElementById("description-modal").classList.add("hidden");
 };
