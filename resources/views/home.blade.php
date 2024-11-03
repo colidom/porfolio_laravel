@@ -228,21 +228,14 @@
     <!-- Cuadro de diálogo para descripciones -->
     <div id="description-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden"
         onclick="closeModal(event)">
-        <div class="bg-gray-800 p-6 rounded-lg w-2/4" onclick="event.stopPropagation();">
-            <h3 id="modal-title" class="text-xl font-semibold text-gray-200"></h3>
-            <p id="modal-description" class="text-gray-400 mt-2 text-justify p-4"></p> <!-- Padding aumentado -->
-            <div class="flex justify-center mt-4">
-                <button id="close-modal"
-                    class="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600">Cerrar</button>
-            </div>
+        <div class="bg-gray-800 p-6 rounded-lg w-2/4 relative" onclick="event.stopPropagation();">
+            <button id="close-modal" class="absolute top-2 right-2 text-red-500 hover:text-red-600 text-3xl"
+                onclick="closeModal(event)">
+                &times;
+            </button>
+            <h3 id="modal-title" class="text-xl font-semibold text-gray-200 text-center"></h3>
+            <p id="modal-description" class="text-gray-400 mt-2 text-justify p-4"></p>
         </div>
-    </div>
-
-    <!-- Modal de descripción -->
-    <div id="description-modal" class="hidden">
-        <h2 id="modal-title"></h2>
-        <p id="modal-description" class="text-justify"></p>
-        <button id="close-modal">Cerrar</button>
     </div>
 
     <footer class="bg-gray-800 p-4 mt-auto">
