@@ -175,7 +175,7 @@
 
                 <!-- Sección de Work Experience -->
                 <section id="work-experience" class="my-8">
-                    <h2 class="text-2xl font-semibold text-gray-200 text-center mb-4">Experiencia laboral</h2>
+                    <h2 class="text-2xl font-semibold text-gray-200 text-center mb-4">Experiencia profesional</h2>
                     <hr class="my-6 border-gray-700 w-1/2 mx-auto">
                     <div class="space-y-4" id="experience-list">
                         @foreach ($data['workExperience'] as $index => $experience)
