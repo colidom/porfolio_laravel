@@ -226,14 +226,19 @@
     </div>
 
     <!-- Cuadro de diálogo para descripciones -->
-    <div id="description-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden"
+    <div id="description-modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden"
         onclick="closeModal(event)">
-        <div class="bg-gray-800 p-6 rounded-lg w-2/4 relative" onclick="event.stopPropagation();">
-            <button id="close-modal" class="absolute top-2 right-2 text-red-500 hover:text-red-600 text-3xl"
-                onclick="closeModal(event)">
-                &times;
-            </button>
-            <h3 id="modal-title" class="text-xl font-semibold text-gray-200 text-center"></h3>
+        <div class="bg-gray-800 p-6 rounded-lg w-full max-w-lg mx-4" onclick="event.stopPropagation()">
+            <div class="flex justify-end">
+                <button id="close-modal" class="text-red-500 hover:text-red-600" onclick="closeModal(event)">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-8 h-8">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <h3 id="modal-title" class="text-xl font-semibold text-gray-200 text-center mt-4"></h3>
             <p id="modal-description" class="text-gray-400 mt-2 text-justify p-4"></p>
         </div>
     </div>
