@@ -242,6 +242,13 @@
         <button id="close-modal">Cerrar</button>
     </div>
 
+    <footer class="bg-gray-800 p-4 mt-auto">
+        <div class="text-center text-gray-400">
+            &copy; {{ date('Y') }} Hecho con ❤ por <span class="font-bold text-blue-500">colidom</span>. Todos los
+            derechos reservados.
+        </div>
+    </footer>
+
     <script>
         const descriptions = @json($data['workExperience']);
 
