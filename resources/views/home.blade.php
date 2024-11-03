@@ -229,7 +229,7 @@
     <div id="description-modal" tabindex="-1" class="fixed inset-0 z-50 hidden" onclick="closeModal(event)">
         <div class="bg-black opacity-70 absolute inset-0"></div> <!-- Fondo oscuro -->
         <div class="relative flex items-center justify-center w-full h-full">
-            <div class="relative w-full max-w-4xl max-h-full" onclick="event.stopPropagation()">
+            <div class="relative w-full max-w-md max-h-full" onclick="event.stopPropagation()">
                 <!-- Detener la propagación del clic aquí -->
                 <!-- Modal content -->
                 <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
