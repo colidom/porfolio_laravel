@@ -180,9 +180,8 @@
                     <div class="space-y-4" id="experience-list">
                         @foreach ($data['workExperience'] as $index => $experience)
                             @if ($index < 5)
-                                <!-- Solo mostrar las primeras 5 experiencias -->
                                 <div class="bg-gray-700 p-4 rounded-lg transition-transform duration-300 transform cursor-pointer
-                    {{ $experience->end_date === null ? 'border-2 border-green-400 text-gray-200 hover:bg-gray-600 hover:text-white' : 'border-2 border-gray-500 text-gray-400 opacity-75 hover:bg-gray-600 hover:text-white' }}"
+                                    {{ $experience->end_date === null ? 'border-2 border-green-400 text-gray-200 hover:bg-gray-600 hover:text-white' : 'border-2 border-gray-500 text-gray-400 opacity-75 hover:bg-gray-600 hover:text-white' }}"
                                     onclick="showDescription({{ $experience->id }})">
                                     <div class="flex justify-between items-center">
                                         <div>
