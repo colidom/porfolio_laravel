@@ -78,11 +78,12 @@ function toggleExperience() {
                 }
 
                 // Añadir el HTML de la experiencia con duración calculada
-                experienceDiv.innerHTML = `<div class="flex justify-between items-center">
-                <div>
-                    <h3 class="text-lg font-bold">${experience.position}</h3>
-                    <p class="text-sm">${experience.company_name}</p>
-                    <p class="text-sm">
+                experienceDiv.innerHTML = `<div class="flex flex-col items-start">
+                    <h3 class="text-lg font-bold text-left">${
+                        experience.position
+                    }</h3>
+                    <p class="text-sm text-left">${experience.company_name}</p>
+                    <p class="text-sm text-left">
                         ${startDate.toLocaleString("default", {
                             month: "short",
                             year: "numeric",
@@ -96,9 +97,8 @@ function toggleExperience() {
                                 : "Presente"
                         }
                     </p>
-                </div>
-                <div class="text-sm text-gray-400">${durationText.trim()}</div>
-            </div>`;
+                    <div class="text-sm text-gray-400 text-left">${durationText.trim()}</div>
+                </div>`;
 
                 experienceList.appendChild(experienceDiv);
             }
