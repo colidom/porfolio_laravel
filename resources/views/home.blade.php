@@ -183,17 +183,14 @@
                                 <div class="bg-gray-700 p-4 rounded-lg transition-transform duration-300 transform cursor-pointer
                                     {{ $experience->end_date === null ? 'border-2 border-green-400 text-gray-200 hover:bg-gray-600 hover:text-white' : 'border-2 border-gray-500 text-gray-400 opacity-75 hover:bg-gray-600 hover:text-white' }}"
                                     onclick="showDescription({{ $experience->id }})">
-                                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
-                                        <div class="flex-1 text-left">
-                                            <h3 class="text-lg font-bold">{{ $experience->position }}</h3>
-                                            <p class="text-sm">{{ $experience->company_name }}</p>
-                                            <p class="text-sm">
-                                                {{ $experience->start_date->format('M Y') }} -
-                                                {{ $experience->end_date ? $experience->end_date->format('M Y') : 'Presente' }}
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="text-sm text-gray-400 sm:ml-4 sm:mt-0 mt-2 sm:text-right flex-shrink-0">
+                                    <div class="flex flex-col items-start">
+                                        <h3 class="text-lg font-bold text-left">{{ $experience->position }}</h3>
+                                        <p class="text-sm text-left">{{ $experience->company_name }}</p>
+                                        <p class="text-sm text-left">
+                                            {{ $experience->start_date->format('M Y') }} -
+                                            {{ $experience->end_date ? $experience->end_date->format('M Y') : 'Presente' }}
+                                        </p>
+                                        <div class="text-sm text-gray-400 text-left">
                                             <?php
                                             $endDate = $experience->end_date ?? now(); // Usar la fecha actual si no hay end_date
                                             $diff = $experience->start_date->diff($endDate);
