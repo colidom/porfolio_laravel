@@ -74,7 +74,7 @@
             </div>
 
             <!-- Panel central -->
-            <main class="w-full md:w-2/3 lg:w-3/4 bg-gray-800 p-4 mt-4 sm:p-8 rounded-lg md:ml-4">
+            <main class="w-full md:w-2/3 lg:w-3/4 bg-gray-800 p-4 max-sm:mt-4 sm:p-8 rounded-lg md:ml-4">
                 <!-- Sección About Me -->
                 <section class="py-8">
                     <h2 class="text-3xl font-semibold text-gray-200 text-center">Sobre mi</h2>
