@@ -80,16 +80,7 @@
                     <h2 class="text-3xl font-semibold text-gray-200 text-center">Sobre mi</h2>
                     <hr class="my-6 border-gray-700 w-1/2 mx-auto">
                     <p class="text-gray-400 mb-6 text-lg leading-relaxed text-justify">
-                        Soy Carlos Oliva, desarrollador de software y administrador de sistemas, apasionado por la
-                        tecnología
-                        y el aprendizaje constante. Creo que el tiempo es un recurso valioso y busco aprovecharlo al
-                        máximo, explorando métodos que mejoren mi eficiencia.
-                    </p>
-                    <p class="text-gray-400 mb-6 text-lg leading-relaxed text-justify">
-                        Disfruto de momentos con mis mascotas 🐶🦜, familia y amigos, así como de bailar salsa y bachata
-                        💃🕺, viajar ✈️, hacer rutas en moto 🛵 y explorar la naturaleza 🏔. Me definen la empatía, la
-                        solidaridad, la honestidad, el trabajo duro y la proactividad, que guían mi interacción con los
-                        demás y mis responsabilidades.
+                        {{ $data['about']->description ?? 'Aún no se ha añadido ninguna descripción' }}
                     </p>
                 </section>
 

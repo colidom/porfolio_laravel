@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Education;
 use App\Models\WorkExperience;
+use App\Models\About;
 use Carbon\Carbon;
 
 class HomeController extends Controller
@@ -30,11 +31,15 @@ class HomeController extends Controller
             ];
         });
 
+        // Obtener el contenido de About (asumiendo que solo tenemos un registro)
+        $about = About::first();
+
         // Enviar los datos a la vista
         $data = [
             'workExperience' => $workExperiences,
             'education' => $education,
-            'name' => 'Carlos', // Ejemplo de nombre
+            'about' => $about,
+            'name' => 'Carlos'
         ];
 
         return view('home', compact('data'));
