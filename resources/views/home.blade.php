@@ -84,7 +84,7 @@
                 <section class="py-8">
                     <h2 class="text-3xl font-semibold text-gray-200 text-center">Sobre mi</h2>
                     <hr class="my-6 border-gray-700 w-1/2 mx-auto">
-                    <p class="text-gray-400 mb-6 text-lg leading-relaxed text-center">
+                    <p class="text-gray-400 mb-6 text-lg leading-relaxed text-justify">
                         {{ $data['about']->description ?? 'Aún no se ha añadido ninguna descripción' }}
                     </p>
                 </section>
