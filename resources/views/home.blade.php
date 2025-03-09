@@ -14,7 +14,7 @@
         <div class="w-full max-w-7xl flex flex-col md:flex-row">
             <!-- Panel izquierdo -->
             <div class="w-full md:w-1/3 lg:w-1/4 space-y-4">
-                <aside class="bg-gray-800 p-4 sm:p-6 mt-4 shadow-md rounded-lg">
+                <aside class="bg-gray-800 p-4 sm:p-6 shadow-md rounded-lg">
                     <div class="text-center">
                         <!-- Foto de perfil -->
                         <div class="w-24 h-24 sm:w-32 sm:h-32 mx-auto rounded-full bg-gray-600 overflow-hidden">
