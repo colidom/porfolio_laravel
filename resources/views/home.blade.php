@@ -59,17 +59,22 @@
                 <aside class="bg-gray-800 p-4 sm:p-6 shadow-md rounded-lg">
                     <h2 class="text-2xl font-semibold text-gray-200 text-center">Educación</h2>
                     <hr class="my-6 border-gray-700 w-3/4 mx-auto">
-                    <ul class="list-inside text-gray-400 text-sm">
-                        @foreach ($data['education'] as $education)
-                            <li class="mt-4">
-                                <strong>{{ $education['institution'] }} - {{ $education['location'] }}</strong><br>
-                                {{ $education['degree'] }}<br>
-                                <span class="text-gray-500">
-                                    {{ $education['start_date'] }} - {{ $education['end_date'] ?? 'Presente' }}
-                                </span><br>
-                            </li>
-                        @endforeach
-                    </ul>
+
+                    @if (!empty($data['education']) && count($data['education']) > 0)
+                        <ul class="list-inside text-gray-400 text-sm">
+                            @foreach ($data['education'] as $education)
+                                <li class="mt-4">
+                                    <strong>{{ $education['institution'] }} - {{ $education['location'] }}</strong><br>
+                                    {{ $education['degree'] }}<br>
+                                    <span class="text-gray-500">
+                        {{ $education['start_date'] }} - {{ $education['end_date'] ?? 'Presente' }}
+                    </span><br>
+                                </li>
+                            @endforeach
+                        </ul>
+                    @else
+                        <p class="text-gray-400 text-center">Aún no se ha añadido ninguna formación académica</p>
+                    @endif
                 </aside>
             </div>
 
@@ -169,40 +174,44 @@
                     <h2 class="text-2xl font-semibold text-gray-200 text-center mb-4">Experiencia profesional</h2>
                     <hr class="my-6 border-gray-700 w-1/2 mx-auto">
                     <div class="space-y-4" id="experience-list">
-                        @foreach ($data['workExperience'] as $index => $experience)
-                            @if ($index < 5)
-                                <div class="bg-gray-700 p-4 rounded-lg transition-transform duration-300 transform cursor-pointer
-                                    {{ $experience->end_date === null ? 'border-2 border-green-400 text-gray-200 hover:bg-gray-600 hover:text-white' : 'border-2 border-gray-500 text-gray-400 opacity-75 hover:bg-gray-600 hover:text-white' }}"
-                                    onclick="showDescription({{ $experience->id }})">
-                                    <div class="flex flex-col items-start">
-                                        <h3 class="text-lg font-bold text-left">{{ $experience->position }}</h3>
-                                        <p class="text-sm text-left">{{ $experience->company_name }}</p>
-                                        <p class="text-sm text-left">
-                                            {{ $experience->start_date->format('M Y') }} -
-                                            {{ $experience->end_date ? $experience->end_date->format('M Y') : 'Presente' }}
-                                        </p>
-                                        <div class="text-sm text-gray-400 text-left">
-                                            <?php
-                                            $endDate = $experience->end_date ?? now(); // Usar la fecha actual si no hay end_date
-                                            $diff = $experience->start_date->diff($endDate);
-                                            $years = $diff->y;
-                                            $months = $diff->m;
-                                            
-                                            // Mostrar años y meses, o solo meses si no hay años
-                                            if ($years > 0) {
-                                                echo $years . ' años ' . $months . ' meses';
-                                            } else {
-                                                echo $months . ' meses';
-                                            }
-                                            ?>
+                        @if (!empty($data['workExperience']) && count($data['workExperience']) > 0)
+                            @foreach ($data['workExperience'] as $index => $experience)
+                                @if ($index < 5)
+                                    <div class="bg-gray-700 p-4 rounded-lg transition-transform duration-300 transform cursor-pointer
+                                        {{ $experience->end_date === null ? 'border-2 border-green-400 text-gray-200 hover:bg-gray-600 hover:text-white' : 'border-2 border-gray-500 text-gray-400 opacity-75 hover:bg-gray-600 hover:text-white' }}"
+                                         onclick="showDescription({{ $experience->id }})">
+                                        <div class="flex flex-col items-start">
+                                            <h3 class="text-lg font-bold text-left">{{ $experience->position }}</h3>
+                                            <p class="text-sm text-left">{{ $experience->company_name }}</p>
+                                            <p class="text-sm text-left">
+                                                {{ $experience->start_date->format('M Y') }} -
+                                                {{ $experience->end_date ? $experience->end_date->format('M Y') : 'Presente' }}
+                                            </p>
+                                            <div class="text-sm text-gray-400 text-left">
+                                                    <?php
+                                                    $endDate = $experience->end_date ?? now(); // Usar la fecha actual si no hay end_date
+                                                    $diff = $experience->start_date->diff($endDate);
+                                                    $years = $diff->y;
+                                                    $months = $diff->m;
+
+                                                    // Mostrar años y meses, o solo meses si no hay años
+                                                    if ($years > 0) {
+                                                        echo $years . ' años ' . $months . ' meses';
+                                                    } else {
+                                                        echo $months . ' meses';
+                                                    }
+                                                    ?>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            @endif
-                        @endforeach
+                                @endif
+                            @endforeach
+                        @else
+                            <p class="text-gray-400 text-center">Aún no se ha añadido ninguna experiencia profesional</p>
+                        @endif
                     </div>
 
-                    @if (count($data['workExperience']) > 5)
+                @if (count($data['workExperience']) > 5)
                         <button id="show-more" class="mt-4 text-blue-500 hover:underline"
                             onclick="toggleExperience()">
                             Mostrar más
