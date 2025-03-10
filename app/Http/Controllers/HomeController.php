@@ -39,7 +39,7 @@ class HomeController extends Controller
             'workExperience' => $workExperiences,
             'education' => $education,
             'about' => $about,
-            'name' => 'Carlos'
+            'name' => 'Carlos Oliva'
         ];
 
         return view('home', compact('data'));
